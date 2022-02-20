@@ -1,7 +1,11 @@
 package square
 
-import (
-	"math"
+import "math"
+
+const (
+	SidesTriangle int64 = 3
+	SidesSquare   int64 = 4
+	SidesCircle   int64 = 0
 )
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
@@ -13,15 +17,15 @@ import (
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum int64) float64 {
-	if sidesNum == 0 {
+	if sidesNum == SidesCircle {
 		return math.Pi * math.Pow(sideLen, 2)
 	}
 
-	if sidesNum == 3 {
+	if sidesNum == SidesTriangle {
 		return math.Pow(sideLen, 2) * math.Sqrt(3) / 4
 	}
 
-	if sidesNum == 4 {
+	if sidesNum == SidesSquare {
 		return math.Pow(sideLen, sideLen)
 	}
 
