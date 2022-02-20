@@ -3,9 +3,9 @@ package square
 import "math"
 
 const (
-	SidesTriangle int64 = 3
-	SidesSquare   int64 = 4
-	SidesCircle   int64 = 0
+	SidesTriangle Sides = 3
+	SidesSquare   Sides = 4
+	SidesCircle   Sides = 0
 )
 
 type Sides int64
